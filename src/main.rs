@@ -62,12 +62,12 @@ fn get_next_board(board:&Vec<Vec<u8>>) -> Vec<Vec<u8>>{
             if board[i][j] == 1{
                 if val2 < &2 {
                     line_val.push(0);
-                }if val2 == &2 || val2 == &3{
+                }else if val2 == &2 || val2 == &3{
                     line_val.push(1);
-                }if val2 > &3 && val2 < &10{//greater than 3
+                }else if val2 > &3 && val2 < &10{//greater than 3
                     line_val.push(0);
                 }
-            }if board[i][j] == 0{
+            }else if board[i][j] == 0{
                 if val2 == &3{
                     line_val.push(1);
                 }else{
@@ -85,7 +85,7 @@ fn pretty_print_arr<T: std::fmt::Display>(board:&Vec<Vec<T>>){
         for j in i{
            print!("{} ", j); 
         }
-        println!("");
+        println!();
     }
-    println!("");
+    println!();
 }
